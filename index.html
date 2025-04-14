@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Grader Tester</title>
+<style>
+ 
+ body{
+ 	background-color: #b0ba6c;
+ }
+ center{
+ 	background-color: #9ca65b;
+    border-radius: 25px;
+    font-size: 20px;
+    font-family: Lucida Console, monospace;
+ }
+
+</style>
+
+</head>
+<body>
+
+ <center>
+     <h1>Grade Judger</h1>
+     <p>You are what your  grades are </p>
+
+     <br><br>
+
+     <label>Math</label> <br>
+        <input type="text" id="num1" class="form-control">
+        
+        <br><br>
+     
+     <label>Science</label> <br>
+        <input type="text" id="num2" class="form-control">
+        
+        <br><br>
+     
+     <label>English</label> <br>
+        <input type="text" id="num3" class="form-control">
+
+        <br><br>
+        
+     <button type="Submit" class="btn btn-succsess" onclick="showVALUE()">Submit</button>
+
+    </center>
+
+
+<script>
+
+    function showVALUE(){
+     	var num1 = document.getElementById('num1').value;
+        var num2 = document.getElementById('num2').value;
+     	var num3 = document.getElementById('num2').value;
+        var sol1 = Number(num1) + Number(num2) + Number(num3);
+     	var ans = Number(sol1) / 3;
+
+
+	switch(true){
+	case(ans >= 94):
+		alert("You are smart, ich lab yuo <333 You're average is " + ans + "🐐🐐🐐");
+		break;
+	  
+
+	case(ans >= 87):
+		alert("Above satisfactory, be proud of yourself 👍👍👍 You're average is " + ans + "👍👍");
+		break;
+	 
+	case(ans >= 80):
+		alert("Satisfactory. Have a great day You're average is " + ans + "👍");
+		break;
+	 
+
+	case(ans >= 75):
+		alert("You are in need of some improvement. You're average is " + ans);
+		break;
+
+	case(ans >= 70):
+		alert("YOURE BREAKING MY HEART 💔💔🐟 You're average is " + ans + "💔💔💔");
+		break;
+	  default:
+		alert("nothin");
+
+	}
+    }
+      </script>
+</body>
+</html>
